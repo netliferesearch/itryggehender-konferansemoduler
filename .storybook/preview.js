@@ -12,16 +12,12 @@ export const parameters = {
 
 export const decorators = [
   (Story) => (
-    <body className="default">
-      <div className="page">
-        <div className="page__content">
-          <div data-portal-component-type="region" data-portal-region="main">
-            <Story />
-          </div>
+    <div className="page">
+      <div className="page__content">
+        <div data-portal-component-type="region" data-portal-region="main">
+          <Story />
         </div>
       </div>
-    </body>
+    </div>
   ),
 ];
-
-
