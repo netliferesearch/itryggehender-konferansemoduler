@@ -1,3 +1,5 @@
+require("../src/css/main.css");
+
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
@@ -22,4 +24,4 @@ export const decorators = [
   ),
 ];
 
-require("../src/css/main.css");
+
