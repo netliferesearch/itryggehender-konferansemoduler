@@ -6,6 +6,20 @@ export const parameters = {
       date: /Date$/,
     },
   },
-}
+};
 
-require('../src/css/main.css');
+export const decorators = [
+  (Story) => (
+    <body className="default">
+      <div className="page">
+        <div className="page__content">
+          <div data-portal-component-type="region" data-portal-region="main">
+            <Story />
+          </div>
+        </div>
+      </div>
+    </body>
+  ),
+];
+
+require("../src/css/main.css");
