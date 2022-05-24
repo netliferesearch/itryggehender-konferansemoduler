@@ -1,0 +1,68 @@
+.c-program__meta {
+  display: inline-flex;
+  margin-right: 2rem;
+  font-weight: 600;
+
+  img {
+    margin-right: 1rem;
+  }
+}
+
+.c-program__heading {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.c-program__main-lecturer {
+  margin-bottom: 1rem;
+}
+
+.c-program__themes {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.c-program__themes li {
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+}
+
+.c-program__themes-color {
+  display: inline-block;
+  width: 1.625rem;
+  height: 1.625rem;
+  margin-right: 0.5rem;
+  border-radius: 9999px;
+}
+
+.c-program__description {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.c-program__lecturers {
+  margin-top: 2.5rem;
+  margin-bottom: 3rem;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.c-program__lecturer {
+  margin-right: 2rem;
+  margin-top: 2rem;
+  max-width: 200px;
+}
+
+.c-program__lecturer-image {
+  border-radius: 9999px;
+  margin-bottom: 0.5rem;
+}
+
+.c-program__lecturer-name {
+  text-decoration: underline;
+}
