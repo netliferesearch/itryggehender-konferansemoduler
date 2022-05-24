@@ -1,4 +1,4 @@
-import "./css/main.scss";
+import "./css/dev.scss";
 import "bootstrap/js/dist/collapse"
 import logo from "./img/logo.svg";
 

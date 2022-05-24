@@ -13,6 +13,8 @@
 /storybook-static
 /src/css/main.css
 /src/css/main.css.map
+/src/css/dev.css
+/src/css/dev.css.map
 
 # misc
 .DS_Store
