@@ -11,6 +11,8 @@
 # production
 /build
 /storybook-static
+/src/css/main.css
+/src/css/main.css.map
 
 # misc
 .DS_Store
