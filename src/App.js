@@ -1,6 +1,6 @@
+import "./css/main.scss";
+import "bootstrap/js/dist/collapse"
 import logo from "./img/logo.svg";
-import "./css/styles.min.css";
-import "./App.scss"
 
 function App() {
   return (
