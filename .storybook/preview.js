@@ -7,3 +7,5 @@ export const parameters = {
     },
   },
 }
+
+require('../src/css/main.css');
