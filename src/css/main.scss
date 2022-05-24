@@ -1,4 +1,13 @@
 // This is where we put all our own styles.
 
+// Required code for including parts of Bootstrap
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+// The parts of Bootstrap we need
+@import "../../node_modules/bootstrap/scss/transitions";
+
+// Our styles
 @import "./variables";
 @import "./components";
