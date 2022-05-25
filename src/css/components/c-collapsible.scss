@@ -1,21 +1,30 @@
 .c-collapsible {
-  padding: 1.5rem;
-  background-color: $lightGrey;
   border-top: 1px solid $warmGrey;
   border-bottom: 1px solid $warmGrey;
 }
 
 .c-collapsible__button {
+  padding: 1.5rem 1.5rem 0 1.5rem;
   width: 100%;
   display: flex;
   justify-content: space-between;
   text-align: left;
+  background-color: $lightGrey;
 }
 
 .c-collapsible__button.collapsed .c-collapsible__button-arrow {
   transform: rotate(180deg);
 }
 
+.c-collapsible__button.collapsed {
+  background-color: initial;
+}
+
+.c-collapsible__button.collapsed + .c-collapsible__body {
+  background-color: initial;
+}
+
 .c-collapsible__body {
-  // margin-top: 2rem;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  background-color: $lightGrey;
 }
