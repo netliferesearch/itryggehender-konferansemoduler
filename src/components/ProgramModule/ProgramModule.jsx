@@ -19,21 +19,16 @@ const ProgramModule = ({
   return (
     <div className="container">
       <div className="row">
-        {/* <div className="col-lg-7 mb-5">
-          <h1 className="mb-5">{overskrift}</h1>
-          <p>{ingress}</p>
-        </div>
+        <Richtext title={overskrift} body={ingress} offset />
 
-        <Richtext title={overskrift} body={ingress} /> */}
-
-        {/* <div className="col-lg-7 mb-5">
+        <div className="col-lg-7 mb-5">
           <h2>Navn på bolk, feks Åpning</h2>
           <p>
             Det må være mulig å skrive noen få setninger her om bolken eller noe
             annet som er relevant for denne bolken av program. Men også mulig
             uten undertekst, slik som vist under under bolk “parallelsesjoner”
           </p>
-        </div> */}
+        </div>
 
         <div className="accordion" id="program-bolk-1">
           {programposter.map(
