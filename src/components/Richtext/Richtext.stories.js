@@ -85,5 +85,6 @@ export const Richtext = (args) => {
 
 Richtext.args = {
   title: "Overskrift",
-  body: "Lorem ipsum"
+  body: "Lorem ipsum",
+  offset: false
 }
