@@ -5,6 +5,14 @@ import { Richtext as RichtextComponent } from "./Richtext";
 export default {
   title: "Components/Heading with richtext",
   component: RichtextComponent,
+  argTypes: {
+    heading: {
+      options: ["h1", "h2", "h3", "h4", "h5", "h6"],
+      control: {
+        type: "select"
+      }
+    }
+  }
 }
 
 export const WithoutPlaceholder = (args) => {
@@ -84,7 +92,8 @@ export const Richtext = (args) => {
 }
 
 Richtext.args = {
+  heading: "h2",
   title: "Overskrift",
   body: "Lorem ipsum",
-  offset: false
+  offset: false,
 }
