@@ -15,7 +15,7 @@
 /src/css/main.css.map
 /src/css/dev.css
 /src/css/dev.css.map
-
+/public/css
 # misc
 .DS_Store
 .env.local
