@@ -58,15 +58,19 @@ const ProgramModule = ({
                   aria-controls={`collapsePost${slugify(foredragTittel)}`}
                 >
                   <span>
-                    <span className="c-program__meta">
-                      <img className="" src={Clock} alt="" />
-                      {klokkeslett}
-                    </span>
+                    {klokkeslett && (
+                      <span className="c-program__meta">
+                        <img className="" src={Clock} alt="" />
+                        {klokkeslett}
+                      </span>
+                    )}
 
-                    <span className="c-program__meta">
-                      <img className="" src={Place} alt="" />
-                      {lokale}
-                    </span>
+                    {lokale && (
+                      <span className="c-program__meta">
+                        <img className="" src={Place} alt="" />
+                        {lokale}
+                      </span>
+                    )}
                   </span>
 
                   <img
