@@ -2,7 +2,7 @@ import React from "react";
 import { default as ProgramModuleComponent } from "./ProgramModule";
 
 export default {
-  title: "Components/Program Module (WORK IN PROGRESS)",
+  title: "Components/Program Module",
   component: ProgramModuleComponent,
 };
 
