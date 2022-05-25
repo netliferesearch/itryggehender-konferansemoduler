@@ -12,8 +12,12 @@
   background-color: $lightGrey;
 }
 
-.c-collapsible__button.collapsed .c-collapsible__button-arrow {
+.c-collapsible__button .c-collapsible__button-arrow {
   transform: rotate(180deg);
+}
+
+.c-collapsible__button.collapsed .c-collapsible__button-arrow {
+  transform: rotate(0);
 }
 
 .c-collapsible__button.collapsed {
