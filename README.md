@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# itryggehender-24/7 Konferansemoduler
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
