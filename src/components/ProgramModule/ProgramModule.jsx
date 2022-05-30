@@ -109,6 +109,8 @@ const ProgramModule = ({ overskrift = "", ingress = "", bolker = [] }) => {
                                   className="c-program__lecturer-image"
                                   src={bilde}
                                   alt=""
+                                  width="140px"
+                                  height="140px"
                                 />
                                 <div className="c-program__lecturer-name">
                                   {navn},
