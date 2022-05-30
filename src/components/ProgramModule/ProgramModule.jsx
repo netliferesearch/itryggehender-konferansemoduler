@@ -103,7 +103,7 @@ const ProgramModule = ({ overskrift = "", ingress = "", bolker = [] }) => {
                         </p>
                         <ul className="c-program__lecturers">
                           {foredragsholdere.map(
-                            ({ navn, beskrivelse, bilde }, index) => (
+                            ({ navn, stilling, selskap, bilde }, index) => (
                               <li key={index} className="c-program__lecturer">
                                 <img
                                   className="c-program__lecturer-image"
@@ -111,10 +111,13 @@ const ProgramModule = ({ overskrift = "", ingress = "", bolker = [] }) => {
                                   alt=""
                                 />
                                 <div className="c-program__lecturer-name">
-                                  {navn}
+                                  {navn},
                                 </div>
-                                <div className="c-program__lecturer-description">
-                                  {beskrivelse}
+                                <div className="c-program__lecturer-profession">
+                                  {stilling}
+                                </div>
+                                <div className="c-program__lecturer-company">
+                                  {selskap}
                                 </div>
                               </li>
                             )
