@@ -18,7 +18,9 @@ const SpeakersModule = ({
     <>
       <Richtext heading="h1" title={overskrift} body={ingress} offset />
 
-      <div className="container">
+      <section className="container">
+        <h2 className="mb-5">Overskrift kommer her</h2>
+
         <ul className="accordion row c-speakers__speaker-list" id="speakers">
           {foredragsholdere.map(
             ({ navn, stilling, selskap, bilde, longDescription }, index) => (
@@ -71,7 +73,7 @@ const SpeakersModule = ({
             )
           )}
         </ul>
-      </div>
+      </section>
     </>
   );
 };
