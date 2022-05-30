@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading } from "src/elements/Heading.jsx";
+import { Heading } from "../../elements/Heading.jsx";
 
 export const Richtext = ({
   offset = false,
