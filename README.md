@@ -14,5 +14,5 @@ Open [http://localhost:6006](http://localhost:6006) open storybook.
 
 ### `yarn build-css`
 
-Builds the css to `public/css/main.css`.
+Builds the css to `assets/main.css`.
 This is only additional css and is dependent on the [https://www.itryggehender24-7.no/](itryggehender) CSS file to work.

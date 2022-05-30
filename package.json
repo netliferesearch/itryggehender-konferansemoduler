@@ -17,7 +17,7 @@
   "scripts": {
     "start": "react-scripts start",
     "dev": "yarn start & yarn storybook & sass --watch src/css/dev.scss src/css/dev.css",
-    "build-css": "sass src/css/main.scss public/css/main.css",
+    "build-css": "sass src/css/main.scss assets/main.css",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
