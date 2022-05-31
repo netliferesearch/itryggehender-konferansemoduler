@@ -2,6 +2,11 @@
   margin-bottom: 9rem;
 }
 
+.c-tabs__list {
+  // fix jumpy active tabs with bold font creating line breaks
+  min-height: 78px;
+}
+
 .c-tabs__tab {
   border-bottom: 1px solid $warmGrey6;
   font-size: 1.125rem;
