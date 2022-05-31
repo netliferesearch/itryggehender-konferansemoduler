@@ -9,7 +9,6 @@ export const bannerModuleData = {
   lenke: "#",
   lenkeTekst: "Lenketekst",
   medFaner: true,
-  withExampleTabs: true,
 };
 
 export const bannerModuleDataEmpty = {

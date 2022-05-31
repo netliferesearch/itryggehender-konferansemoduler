@@ -42,8 +42,10 @@ export const BannerModule = ({
           </div>
         </div>
       </div>
-      
-      {medFaner && <Tabs withExampleTabs={withExampleTabs} numberOfTabs={antallFaner} />}
+
+      {medFaner && (
+        <Tabs withExampleTabs={withExampleTabs} numberOfTabs={antallFaner} />
+      )}
     </>
   );
 };
