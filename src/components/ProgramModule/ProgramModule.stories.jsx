@@ -30,19 +30,31 @@ const generateProgramPosts = ({ amount, bolkNavn }) => {
       temaer: [
         {
           tema: "Navn på tema 1",
-          color: "#FE6100",
+          colorClass: "orange",
         },
         {
           tema: "Navn på tema 2",
-          color: "#1E0072",
+          colorClass: "blue-purple",
         },
         {
           tema: "Navn på tema 3",
-          color: "#00625D",
+          colorClass: "deep-green",
         },
         {
           tema: "Navn på tema 4",
-          color: "#615046",
+          colorClass: "warm-grey",
+        },
+        {
+          tema: "Navn på tema 5",
+          colorClass: "light-orange",
+        },
+        {
+          tema: "Navn på tema 6",
+          colorClass: "light-blue",
+        },
+        {
+          tema: "Navn på tema 6",
+          colorClass: "light-brown",
         },
       ],
       lesMerLink: "https://www.itryggehender24-7.no/",

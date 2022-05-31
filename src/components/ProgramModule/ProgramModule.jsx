@@ -18,7 +18,7 @@ const ProgramModule = ({ overskrift = "", ingress = "", bolker = [] }) => {
 
       <div className="container">
         {bolker.map(({ bolkNavn, bolkIngress, programposter }) => (
-          <section className="row mb-5">
+          <section className="row mb-5" key={bolkNavn}>
             <div className="col-lg-7 mb-5">
               <h2 className="c-program__heading">{bolkNavn}</h2>
               <p>{bolkIngress}</p>
@@ -77,11 +77,10 @@ const ProgramModule = ({ overskrift = "", ingress = "", bolker = [] }) => {
                         {foredragsholder}
                       </div>
                       <ul className="c-program__themes">
-                        {temaer.map(({ tema, color }) => (
+                        {temaer.map(({ tema, colorClass }) => (
                           <li key={tema}>
                             <div
-                              className="c-program__themes-color"
-                              style={{ backgroundColor: color }}
+                              className={`c-program__themes-color c-program__themes-color--${colorClass}`}
                             ></div>
                             {tema}
                           </li>
@@ -152,7 +151,12 @@ ProgramModule.propTypes = {
           lokale: PropTypes.string,
           omForedraget: PropTypes.string,
           bilde: PropTypes.string,
-          temaer: PropTypes.arrayOf(PropTypes.object),
+          temaer: PropTypes.arrayOf(
+            PropTypes.shape({
+              tema: PropTypes.string,
+              colorClass: PropTypes.string,
+            })
+          ),
           lesMerLink: PropTypes.string,
           foredragsholdere: PropTypes.arrayOf(
             PropTypes.shape({

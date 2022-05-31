@@ -1,6 +1,4 @@
-
-
-.u-bg-color{
+.u-bg-color {
   // do important because we have to fight existing css
   &--green {
     background-color: $mintGreen !important;
@@ -9,7 +7,7 @@
     background-color: $lightBlue !important;
   }
   &--orange {
-    background-color: $warmOrange !important;
+    background-color: $lightOrange !important;
   }
   &--grey {
     background-color: $lightGrey !important;
