@@ -16,7 +16,7 @@ export const BannerModule = ({
   return (
     <>
       <div className={`c-banner u-bg-color--${farge}`}>
-        <div class="container">
+        <div className="container">
           <div className={`row ${bildeHøyrestilt ? "flex-row-reverse" : ""}`}>
             <div className="col-md mb-5 mb-md-0 c-banner__img">
               <img className="w-100" src={bilde} alt={alternativTekst} />
