@@ -41,7 +41,7 @@ const generateProgramPosts = ({ amount, bolkNavn }) => {
           colorClass: "light-blue",
         },
         {
-          tema: "Navn på tema 6",
+          tema: "Navn på tema 7",
           colorClass: "light-brown",
         },
       ],
