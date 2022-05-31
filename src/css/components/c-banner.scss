@@ -1,0 +1,15 @@
+.c-banner {
+  padding: 6rem 0 4.5rem 0;
+
+  &__lead {
+    font-size: 1.4rem;
+  }
+
+  .u-btn-link--arrow-white {
+    &.btn-link--arrow {
+      &:after {
+        background-image: url(../../img/arrow-right-white.svg) !important;
+      }
+    }
+  }
+}
