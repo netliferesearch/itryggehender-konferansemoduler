@@ -8,7 +8,7 @@ const bannerModuleData = {
   bildeHøyrestilt: true,
   lenke: "#",
   lenkeTekst: "Lenketekst",
-  medFaner: false,
+  medFaner: true,
 };
 
 export default bannerModuleData;
