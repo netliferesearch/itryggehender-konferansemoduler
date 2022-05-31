@@ -87,7 +87,7 @@ const Tabs = () => (
         role="tabpanel"
         aria-labelledby="forside-tab"
       >
-        <Richtext />
+        <Richtext offset />
       </div>
       <div
         className="tab-pane fade"
@@ -111,7 +111,7 @@ const Tabs = () => (
         role="tabpanel"
         aria-labelledby="praktisk-tab"
       >
-        <Richtext />
+        <Richtext offset />
       </div>
     </div>
   </>
