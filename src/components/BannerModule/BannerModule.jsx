@@ -1,5 +1,5 @@
 import { Heading } from "../../elements/Heading.jsx";
-import Tabs from "./Tabs.jsx";
+import { Tabs } from "./Tabs.jsx";
 
 export const BannerModule = ({
   farge = "green",
@@ -12,6 +12,8 @@ export const BannerModule = ({
   lenkeTekst = "Lenketekst",
   overskriftNivå = "h1",
   medFaner = true,
+  antallFaner,
+  withExampleTabs = true,
 }) => {
   return (
     <>
@@ -40,8 +42,8 @@ export const BannerModule = ({
           </div>
         </div>
       </div>
-
-      {medFaner && <Tabs />}
+      
+      {medFaner && <Tabs withExampleTabs={withExampleTabs} numberOfTabs={antallFaner} />}
     </>
   );
 };

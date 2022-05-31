@@ -1,5 +1,5 @@
 import { BannerModule as BannerModuleComponent } from "./BannerModule";
-import bannerModuleData from "./BannerModule.data";
+import {bannerModuleData, bannerModuleDataEmpty} from "./BannerModule.data";
 
 export default {
   title: "Components/BannerModule",
@@ -23,5 +23,9 @@ export default {
 export const BannerModule = ({ ...args }) => {
   return <BannerModuleComponent {...args} />;
 };
-
 BannerModule.args = bannerModuleData;
+
+export const BannerModuleWithoutContent = ({ ...args }) => {
+  return <BannerModuleComponent {...args} />;
+}
+BannerModuleWithoutContent.args = bannerModuleDataEmpty;
