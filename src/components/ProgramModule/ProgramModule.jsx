@@ -16,13 +16,15 @@ const ProgramModule = ({ overskrift = "", ingress = "", bolker = [] }) => {
     <>
       <Richtext heading="h1" title={overskrift} body={ingress} offset />
 
-      <div className="container">
-        {bolker.map(({ bolkNavn, bolkIngress, programposter }) => (
-          <section className="row mb-5" key={bolkNavn}>
+      {bolker.map(({ bolkNavn, bolkIngress, programposter }) => (
+        <section className="container mb-5" key={bolkNavn}>
+          <div className="row">
             <div className="col-lg-7 mb-5">
               <h2 className="c-program__heading">{bolkNavn}</h2>
               <p>{bolkIngress}</p>
             </div>
+          </div>
+          <div className="row">
             <div className="accordion col-12" id={slugify(bolkNavn)}>
               {programposter.map(
                 ({
@@ -130,9 +132,9 @@ const ProgramModule = ({ overskrift = "", ingress = "", bolker = [] }) => {
                 )
               )}
             </div>
-          </section>
-        ))}
-      </div>
+          </div>
+        </section>
+      ))}
     </>
   );
 };
