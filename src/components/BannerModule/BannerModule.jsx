@@ -1,32 +1,32 @@
 import { Heading } from "../../elements/Heading.jsx";
 
 export const BannerModule = ({
-  color = "green",
-  title = "Overskrift",
-  lead = `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis vero sequi dolores aut repellat quisquam harum laudantium ipsum ducimus molestias ipsam beatae eveniet assumenda, placeat numquam enim id amet voluptas.`,
-  img = "https://via.placeholder.com/400x300",
-  altText = "",
-  isImgRight = true,
-  url = "#",
-  urlText = "Lenketekst",
-  headingLevel = "h1",
-  withTabs = false
+  farge = "green",
+  overskrift = "Overskrift",
+  tekst = `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis vero sequi dolores aut repellat quisquam harum laudantium ipsum ducimus molestias ipsam beatae eveniet assumenda, placeat numquam enim id amet voluptas.`,
+  bilde = "https://via.placeholder.com/400x300",
+  alternativTekst = "",
+  bildeVentrestilt = true,
+  lenke = "#",
+  lenkeTekst = "Lenketekst",
+  overskriftNivå = "h1",
+  medFaner = false
 }) => {
   return (
-    <div className={`c-banner u-bg-color--${color}`}>
+    <div className={`c-banner u-bg-color--${farge}`}>
       <div class="container">
-        <div className={`row ${isImgRight ? "flex-row-reverse" : ""}`}>
+        <div className={`row ${bildeVentrestilt ? "flex-row-reverse" : ""}`}>
           <div className="col-md mb-5 mb-md-0 c-banner__img">
-            <img className="w-100" src={img} alt={altText} />
+            <img className="w-100" src={bilde} alt={alternativTekst} />
           </div>
           <div className="col-md">
-            <Heading classes="mb-4" level={headingLevel}>
-              {title}
+            <Heading classes="mb-4" level={overskriftNivå}>
+              {overskrift}
             </Heading>
-            {lead && <p className="c-banner__lead mb-4">{lead}</p>}
-            {url && (
-              <a href={url} className={`btn btn-link btn-link--arrow c-banner__link ${color === "deep-blue" ? "u-btn-link--arrow-white" : ""}`}>
-                {color}
+            {tekst && <p className="c-banner__lead mb-4">{tekst}</p>}
+            {lenke && (
+              <a href={lenke} className={`btn btn-link btn-link--arrow c-banner__link ${farge === "deep-blue" ? "u-btn-link--arrow-white" : ""}`}>
+                {lenkeTekst}
               </a>
             )}
           </div>
