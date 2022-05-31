@@ -1,0 +1,38 @@
+.c-tabs {
+  margin-bottom: 9rem;
+}
+
+.c-tabs__tab {
+  border-bottom: 1px solid $warmGrey6;
+  font-size: 1.125rem;
+
+  @media (min-width: 576px) {
+    font-size: 1.375rem;
+    border-bottom: none;
+    border-right: 1px solid $warmGrey6;
+  }
+}
+
+.c-tabs__tab:last-child {
+  @media (min-width: 576px) {
+    border-right: none;
+  }
+}
+
+.c-tabs__link {
+  padding: 0;
+  line-height: 1;
+  margin-top: 1rem;
+  margin-bottom: 0.875rem;
+  border-bottom: 2px solid transparent;
+
+  @media (min-width: 576px) {
+    padding-bottom: 1rem;
+    margin-bottom: 0;
+  }
+}
+.c-tabs__link.active {
+  font-weight: 700;
+  border-bottom: 2px solid orange;
+  display: inline-block;
+}
