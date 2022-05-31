@@ -11,7 +11,7 @@ export default {
         type: "select",
       },
     },
-    farge: {
+    bakgrunnsfarge: {
       options: ["green", "deep-blue", "blue", "orange", "grey"],
       control: {
         type: "select",
