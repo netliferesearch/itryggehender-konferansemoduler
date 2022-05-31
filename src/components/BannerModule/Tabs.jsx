@@ -19,51 +19,55 @@ const makeTabList = (num) => {
 
 export const Tabs = ({ numberOfTabs, withExampleTabs }) => {
   const EmptyTabs = () => {
-    return (<>
-      <div className="container mt-5 c-tabs">
-        <ul
-          className="row nav align-items-center c-tabs__list"
-          id="tabs"
-          role="tablist"
-        >
-          {makeTabList(numberOfTabs).map(({ id, label }, i) => {
-            return (
-              <li
-                className="col-sm text-center nav-item c-tabs__tab"
-                role="presentation"
-              >
-                <a
-                  className={`${!i ? "active" : ""} nav-link c-tabs__link`}
-                  id={id}
-                  data-toggle="tab"
-                  href={`#${id}-tab`}
-                  role="tab"
-                  aria-controls="forside"
-                  aria-selected={!i ? "true" : "false"}
+    return (
+      <>
+        <div className="container mt-5 c-tabs">
+          <ul
+            className="row nav align-items-center c-tabs__list"
+            id="tabs"
+            role="tablist"
+          >
+            {makeTabList(numberOfTabs).map(({ id, label }, i) => {
+              return (
+                <li
+                  className="col-sm text-center nav-item c-tabs__tab"
+                  role="presentation"
+                  key={id}
                 >
-                  {label}
-                </a>
-              </li>
+                  <a
+                    className={`${!i ? "active" : ""} nav-link c-tabs__link`}
+                    id={id}
+                    data-toggle="tab"
+                    href={`#${id}-tab`}
+                    role="tab"
+                    aria-controls="forside"
+                    aria-selected={!i ? "true" : "false"}
+                  >
+                    {label}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+
+        <div className="tab-content" id="tabsContent">
+          {makeTabList(numberOfTabs).map(({ id }, i) => {
+            return (
+              <div
+                className={`${!i ? "active" : ""} tab-pane fade show`}
+                id={`${id}-tab`}
+                role="tabpanel"
+                aria-labelledby="forside-tab"
+                key={id}
+              >
+                {id}: content will have its own style depending on part
+              </div>
             );
           })}
-        </ul>
-      </div>
-
-      <div className="tab-content" id="tabsContent">
-        {makeTabList(numberOfTabs).map(({ id }, i) => {
-          return (
-            <div
-              className={`${!i ? "active" : ""} tab-pane fade show`}
-              id={`${id}-tab`}
-              role="tabpanel"
-              aria-labelledby="forside-tab"
-            >
-              {id}: content will have its own style depending on part
-            </div>
-          );
-        })}
-      </div>
-    </>)
+        </div>
+      </>
+    );
   };
 
   const TabsWithContent = () => (
@@ -140,7 +144,7 @@ export const Tabs = ({ numberOfTabs, withExampleTabs }) => {
           </li>
         </ul>
       </div>
-  
+
       <div className="tab-content" id="tabsContent">
         <div
           className="tab-pane fade show active"
@@ -178,8 +182,8 @@ export const Tabs = ({ numberOfTabs, withExampleTabs }) => {
     </>
   );
 
-  if(withExampleTabs) {
+  if (withExampleTabs) {
     return <TabsWithContent />;
-  } 
+  }
   return <EmptyTabs />;
 };
