@@ -1,15 +1,30 @@
 .c-banner {
-  padding: 6rem 0 4.5rem 0;
+  padding: 3.5rem 0;
 
-  &__lead {
-    font-size: 1.4rem;
+  &__lead, &__link {
+    font-size: 1.2rem;
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 500px;
+    margin-right: auto;
+    // align-self: center;
   }
 
   .u-btn-link--arrow-white {
-    &.btn-link--arrow {
-      &:after {
-        background-image: url(../../img/arrow-right-white.svg) !important;
-      }
+    &.btn-link--arrow:after {
+      background-image: url(../../img/arrow-right-white.svg) !important;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .c-banner {
+    padding: 6rem 0 4.5rem 0;
+
+    &__lead, &__link {
+      font-size: 1.4rem;
     }
   }
 }

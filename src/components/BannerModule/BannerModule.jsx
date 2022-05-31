@@ -1,21 +1,22 @@
 import { Heading } from "../../elements/Heading.jsx";
 
 export const BannerModule = ({
-  color = "deep-blue",
+  color = "green",
   title = "Overskrift",
   lead = `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis vero sequi dolores aut repellat quisquam harum laudantium ipsum ducimus molestias ipsam beatae eveniet assumenda, placeat numquam enim id amet voluptas.`,
   img = "https://via.placeholder.com/400x300",
   altText = "",
-  isImgLeft = true,
+  isImgRight = true,
   url = "#",
   urlText = "Lenketekst",
   headingLevel = "h1",
+  withTabs = false
 }) => {
   return (
     <div className={`c-banner u-bg-color--${color}`}>
       <div class="container">
-        <div className="row">
-          <div className="col-md mb-4 mb-md-0">
+        <div className={`row ${isImgRight ? "flex-row-reverse" : ""}`}>
+          <div className="col-md mb-5 mb-md-0 c-banner__img">
             <img className="w-100" src={img} alt={altText} />
           </div>
           <div className="col-md">
@@ -24,7 +25,7 @@ export const BannerModule = ({
             </Heading>
             {lead && <p className="c-banner__lead mb-4">{lead}</p>}
             {url && (
-              <a href={url} className={`btn btn-link btn-link--arrow ${color === "deep-blue" ? "u-btn-link--arrow-white" : ""}`}>
+              <a href={url} className={`btn btn-link btn-link--arrow c-banner__link ${color === "deep-blue" ? "u-btn-link--arrow-white" : ""}`}>
                 {color}
               </a>
             )}
