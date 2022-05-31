@@ -1,6 +1,7 @@
 import "./css/dev.scss";
-import "bootstrap/js/dist/collapse"
+import "bootstrap/js/dist/collapse";
 import logo from "./img/logo.svg";
+import { BannerModule } from "./Components/BannerModule/BannerModule.stories";
 
 function App() {
   return (
@@ -132,10 +133,7 @@ function App() {
                         sikker helse- og omsorgstjeneste -&nbsp;uten skade, for
                         hver pasient og bruker, alltid og overalt.&nbsp;
                       </p>
-                      <button
-                        onclick="window.location.href='http://www.itryggehender24-7.no/om-i-trygge-hender-24-7'"
-                        className="btn btn-outline-primary"
-                      >
+                      <button className="btn btn-outline-primary">
                         Mer om arbeidet
                       </button>
                     </div>
@@ -151,6 +149,9 @@ function App() {
                 </div>
               </div>
             </div>
+
+            <BannerModule />
+
             <div data-portal-component-type="part" className="container">
               <div className="row mb-96 mt-96">
                 <div className="col-lg-7 box-home__wrap">
@@ -240,10 +241,7 @@ function App() {
                         </a>
                       </div>
                     </div>
-                    <button
-                      className="btn btn-link btn-link--block btn-link--arrow"
-                      onclick="window.location.href='http://www.itryggehender24-7.no/reduser-pasientskader'"
-                    >
+                    <button className="btn btn-link btn-link--block btn-link--arrow">
                       <span>Se alle områdene</span>
                     </button>
                   </div>
@@ -305,10 +303,7 @@ function App() {
                         viktigste møteplass for alle som er opptatt av
                         pasientsikkerhet og kvalitetsforbedring.&nbsp;
                       </p>
-                      <button
-                        onclick="window.location.href='http://www.itryggehender24-7.no/pasientsikkerhetskonferansen'"
-                        className="btn btn-outline-primary"
-                      >
+                      <button className="btn btn-outline-primary">
                         Mer informasjon og opptak av fjorårets konferanse
                       </button>
                     </div>
@@ -390,10 +385,7 @@ function App() {
                         <p>Myndigheter</p>
                       </div>
                     </div>
-                    <button
-                      className="btn btn-outline-primary"
-                      onclick="window.location.href='http://www.itryggehender24-7.no/om-i-trygge-hender-24-7/aktorer-roller-og-ansvar'"
-                    >
+                    <button className="btn btn-outline-primary">
                       Mer om roller og ansvar
                     </button>
                   </div>
@@ -431,7 +423,6 @@ function App() {
                       <button
                         className="btn statistics__box__arrow"
                         url="/malinger/folge-med-pa-pasientsikkerhet"
-                        onclick="window.location.href='/malinger/folge-med-pa-pasientsikkerhet'"
                       >
                         Se flere tall
                       </button>
