@@ -1,7 +1,7 @@
 import "./css/dev.scss";
 import "bootstrap/js/dist/collapse";
 import logo from "./img/logo.svg";
-import { BannerModule } from "./Components/BannerModule/BannerModule.stories";
+import { BannerModule } from "./components/BannerModule";
 
 function App() {
   return (
@@ -117,6 +117,7 @@ function App() {
             </div>
           </div>
         </header>
+        <BannerModule />
         <div className="page__content">
           <div data-portal-component-type="region" data-portal-region="main">
             <div
@@ -149,8 +150,6 @@ function App() {
                 </div>
               </div>
             </div>
-
-            <BannerModule />
 
             <div data-portal-component-type="part" className="container">
               <div className="row mb-96 mt-96">
