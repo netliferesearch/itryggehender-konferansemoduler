@@ -34,22 +34,6 @@ const SpeakersModule = ({
                     aria-expanded="false"
                     aria-controls={`collapsePost${slugify(navn)}`}
                   >
-                    <span className="c-speakers__speaker-header flex-column flex-lg-row">
-                      <img
-                        className="c-speakers__speaker-image"
-                        src={bilde}
-                        alt=""
-                      />
-                      <span className="c-speakers__speaker-info">
-                        <h3 className="c-speakers__speaker-name">{navn}</h3>
-                        <span className="c-speakers__speaker-profession">
-                          {stilling}
-                        </span>
-                        <span className="c-speakers__speaker-company">
-                          {selskap}
-                        </span>
-                      </span>
-                    </span>
                     <img
                       className="c-collapsible__button-arrow"
                       src={ArrowAccordion}
@@ -58,6 +42,23 @@ const SpeakersModule = ({
                   </button>
 
                   <div className="c-collapsible__body">
+                    <div className="c-speakers__speaker-header flex-column flex-lg-row">
+                      <img
+                        className="c-speakers__speaker-image"
+                        src={bilde}
+                        alt=""
+                      />
+                      <div className="c-speakers__speaker-info">
+                        <h3 className="c-speakers__speaker-name">{navn}</h3>
+                        <div className="c-speakers__speaker-profession">
+                          {stilling}
+                        </div>
+                        <div className="c-speakers__speaker-company">
+                          {selskap}
+                        </div>
+                      </div>
+                    </div>
+                    
                     <div
                       className="collapse"
                       id={`collapsePost${slugify(navn)}`}
