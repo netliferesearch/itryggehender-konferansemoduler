@@ -85,6 +85,9 @@
 .c-program__lecturer-image {
   border-radius: 9999px;
   margin-bottom: 0.5rem;
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
 }
 
 .c-program__lecturer-name {
