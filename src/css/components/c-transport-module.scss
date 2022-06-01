@@ -6,8 +6,6 @@
   flex-wrap: wrap;
   flex-basis: 1 1 100%;
 
-  &--box {
-  }
 }
 
 @media(min-width: 40em){
@@ -15,10 +13,7 @@
     flex-wrap: wrap;
   }
 }
-.c-box-style {
-  margin-bottom: 0;
-  justify-self: flex-end;
-
+.c-box {
   &__text-body {
     // copied some of this form the p tag styling of the other box style
     margin-bottom: 0;
@@ -31,15 +26,5 @@
     line-clamp: 4;
     box-orient: vertical;
     text-overflow: ellipsis;
-  }
-
-  &__col-1 {
-    flex: 1 1 0%;
-  }
-  &__col-2 {
-    flex: 0 0 40%;
-  }
-  &__col-3 {
-    flex: 2 1 0%;
   }
 }
