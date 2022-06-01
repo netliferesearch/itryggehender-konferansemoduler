@@ -47,6 +47,8 @@ const SpeakersModule = ({
                         className="c-speakers__speaker-image"
                         src={bilde}
                         alt=""
+                        width="140"
+                        height="140"
                       />
                       <div className="c-speakers__speaker-info">
                         <h3 className="c-speakers__speaker-name">{navn}</h3>

@@ -10,6 +10,10 @@
 .c-speakers__speaker-image {
   margin-right: 1rem;
   border-radius: 9999px;
+  min-width: 140px;
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
 }
 
 .c-speakers__speaker-info {
