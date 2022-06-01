@@ -50,7 +50,15 @@ const ProgramModule = ({ overskrift = "", ingress = "", bolker = [] }) => {
                       aria-expanded="false"
                       aria-controls={`collapsePost${slugify(foredragTittel)}`}
                     >
-                      <span>
+                      <img
+                        className="c-collapsible__button-arrow"
+                        src={ArrowAccordion}
+                        alt=""
+                      />
+                    </button>
+
+                    <div className="c-collapsible__body">
+                      <div>
                         {klokkeslett && (
                           <span className="c-program__meta">
                             <img className="" src={Clock} alt="" />
@@ -64,16 +72,7 @@ const ProgramModule = ({ overskrift = "", ingress = "", bolker = [] }) => {
                             {lokale}
                           </span>
                         )}
-                      </span>
-
-                      <img
-                        className="c-collapsible__button-arrow"
-                        src={ArrowAccordion}
-                        alt=""
-                      />
-                    </button>
-
-                    <div className="c-collapsible__body">
+                      </div>
                       <h3 className="c-program__heading">{foredragTittel}</h3>
                       <div className="c-program__main-lecturer">
                         {foredragsholder}
