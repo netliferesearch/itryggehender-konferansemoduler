@@ -34,22 +34,22 @@ const SpeakersModule = ({
                     aria-expanded="false"
                     aria-controls={`collapsePost${slugify(navn)}`}
                   >
-                    <div className="c-speakers__speaker-header flex-column flex-lg-row">
+                    <span className="c-speakers__speaker-header flex-column flex-lg-row">
                       <img
                         className="c-speakers__speaker-image"
                         src={bilde}
                         alt=""
                       />
-                      <div className="c-speakers__speaker-info">
+                      <span className="c-speakers__speaker-info">
                         <h3 className="c-speakers__speaker-name">{navn}</h3>
-                        <div className="c-speakers__speaker-profession">
+                        <span className="c-speakers__speaker-profession">
                           {stilling}
-                        </div>
-                        <div className="c-speakers__speaker-company">
+                        </span>
+                        <span className="c-speakers__speaker-company">
                           {selskap}
-                        </div>
-                      </div>
-                    </div>
+                        </span>
+                      </span>
+                    </span>
                     <img
                       className="c-collapsible__button-arrow"
                       src={ArrowAccordion}

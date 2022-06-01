@@ -12,6 +12,8 @@
 }
 
 .c-speakers__speaker-info {
+  display: flex;
+  flex-direction: column;
   padding-top: 1.25rem;
 }
 
