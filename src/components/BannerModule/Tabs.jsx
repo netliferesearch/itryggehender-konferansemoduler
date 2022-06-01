@@ -17,7 +17,12 @@ const makeTabList = (num) => {
   return tabList;
 };
 
+// $('#foredragsholdere-tab').trigger('click')
+
 export const Tabs = ({ numberOfTabs, withExampleTabs }) => {
+  const jqueryLink = (i) => {
+    return {__html: `<a class="btn btn-link" onclick="$('#tabItem${i}-tab').trigger('click')">go to next tab</a>`}
+  }
   const EmptyTabs = () => {
     return (
       <>
@@ -36,9 +41,9 @@ export const Tabs = ({ numberOfTabs, withExampleTabs }) => {
                 >
                   <a
                     className={`${!i ? "active" : ""} nav-link c-tabs__link`}
-                    id={id}
+                    id={`${id}-tab`}
                     data-toggle="tab"
-                    href={`#${id}-tab`}
+                    href={`#${id}`}
                     role="tab"
                     aria-controls="forside"
                     aria-selected={!i ? "true" : "false"}
@@ -56,12 +61,16 @@ export const Tabs = ({ numberOfTabs, withExampleTabs }) => {
             return (
               <div
                 className={`${!i ? "active" : ""} tab-pane fade show`}
-                id={`${id}-tab`}
+                id={`${id}`}
                 role="tabpanel"
                 aria-labelledby="forside-tab"
                 key={id}
               >
-                {id}: content will have its own style depending on part
+                {id}: content will have its own style depending on part <br />
+
+                <div dangerouslySetInnerHTML={jqueryLink(i + 1)} />
+
+                
               </div>
             );
           })}
