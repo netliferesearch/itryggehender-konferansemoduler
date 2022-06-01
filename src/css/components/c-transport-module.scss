@@ -1,0 +1,30 @@
+.c-transport-module {
+  gap: 2rem;
+  display: flex;
+  align-items: end;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-basis: 1 1 100%;
+
+}
+
+@media(min-width: 40em){
+  .c-transport-module {
+    flex-wrap: wrap;
+  }
+}
+.c-box {
+  &__text-body {
+    // copied some of this form the p tag styling of the other box style
+    margin-bottom: 0;
+    line-height: 1.75rem;
+    max-height: 7rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    line-clamp: 4;
+    box-orient: vertical;
+    text-overflow: ellipsis;
+  }
+}
