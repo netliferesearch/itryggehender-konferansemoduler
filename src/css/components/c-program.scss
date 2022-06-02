@@ -74,12 +74,27 @@
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
+  margin-left: -1rem;
+  margin-right: -1rem;
 }
 
 .c-program__lecturer {
-  margin-right: 2rem;
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
   margin-top: 2rem;
-  max-width: 200px;
+
+  @media (min-width: 576px) {
+    width: 50%;
+  }
+
+  @media (min-width: 768px) {
+    width: 33.3333%;
+  }
+
+  @media (min-width: 992px) {
+    width: 25%;
+  }
 }
 
 .c-program__lecturer-image {
