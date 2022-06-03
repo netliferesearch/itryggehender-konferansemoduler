@@ -9,7 +9,7 @@ const generateDummyContent = (amount) => {
       fører en dør ind til konsulens værelse; længere tilbage, på samme væg,
       er en lignende dør. Midt på den modsatte væg er en større
       indgangsdør.`,
-      url: "#",
+      url: i !== 1 ? "#" : "",
     });
   }
   return dummyArray;
@@ -53,19 +53,16 @@ export const TransportModule = ({
                       <img className="w-100" src={img} alt={altText} />
                     </div>
                   )}
-                  <div
-                    className={`u-bg-color--${color} box-home`}
-                  >
-                    <a href={url}>
+                  <div className={`u-bg-color--${color} box-home relative`}>
+                    {url && <a className="stretched-link" href={url}></a>}
                       <h3
                         className={`${
-                          cta ? "btn btn-link--arrow title-link" : ""
+                          cta && url ? "btn btn-link--arrow title-link" : ""
                         }`}
                       >
                         {heading}
                       </h3>
                       <div className={`c-box__text-body`}>{body}</div>
-                    </a>
                   </div>
                 </div>
               );
