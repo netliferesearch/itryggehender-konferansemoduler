@@ -15,6 +15,12 @@ export default {
         type: "select",
         options: [1, 2, 3],
       },
+    },
+    layout: {
+      control: {
+        type: "select",
+        options: ["1", "2", "3", "1-2"],
+      }
     }
   },
 };
@@ -28,6 +34,6 @@ TransportModule.args = {
   lead: "",
   icon: "/icons/",
   cols: 3,
+  layout: "3",
   color: "",
-  isCollapsed: false,
 };

@@ -15,24 +15,31 @@ const generateDummyContent = (amount) => {
   return dummyArray;
 };
 
+const LinkHeading = ({ href, children }) => {
+
+  if(href){return (
+    <a
+      href={href}
+    >
+      <h3 className=" btn btn-link--arrow title-link">{children}</h3>
+    </a>
+  )}
+  return <h3>{children}</h3>;
+};
+
 export const TransportModule = ({
   title = "",
   lead = "",
   icon = "/icons/",
   cols = 3,
   color = "orange",
-  isCollapsed = false,
+  layout = "3"
 }) => {
-  const layout = {
-    1: "col-md-10 col-lg-8 offset-md-1 offset-lg-2",
-    2: "col-md-6",
-    3: "col-md-6 col-lg-4 mx-auto",
-  };
 
   return (
     <>
       <div className="container">
-        <div className={`mb-96 mt-96 row align-items-end`}>
+        <div className={`c-transport-module c-transport-module--col-${layout}`}>
           {generateDummyContent(cols).map(
             (
               {
@@ -47,22 +54,15 @@ export const TransportModule = ({
               i
             ) => {
               return (
-                <div className={`${layout[cols]} c-box mb-4`}>
+                <div className={`c-box c-box--col-${cols}`}>
                   {i === 0 && (
                     <div>
                       <img className="w-100" src={img} alt={altText} />
                     </div>
                   )}
-                  <div className={`u-bg-color--${color} box-home relative`}>
-                    {url && <a className="stretched-link" href={url}></a>}
-                      <h3
-                        className={`${
-                          cta && url ? "btn btn-link--arrow title-link" : ""
-                        }`}
-                      >
-                        {heading}
-                      </h3>
-                      <div className={`c-box__text-body`}>{body}</div>
+                  <div className={`u-bg-color--${color} box-home`}>
+                    <LinkHeading href={url}>heading</LinkHeading>
+                    <div className={`c-box__text-body`}>{body}</div>
                   </div>
                 </div>
               );
