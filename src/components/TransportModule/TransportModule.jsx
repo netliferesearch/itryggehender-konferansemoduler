@@ -21,16 +21,13 @@ const LinkHeading = ({ href, children }) => {
     <a
       href={href}
     >
-      <h3 className=" btn btn-link--arrow title-link">{children}</h3>
+      <h3 className="btn btn-link--arrow title-link">{children}</h3>
     </a>
   )}
   return <h3>{children}</h3>;
 };
 
 export const TransportModule = ({
-  title = "",
-  lead = "",
-  icon = "/icons/",
   cols = 3,
   color = "orange",
   layout = "3"

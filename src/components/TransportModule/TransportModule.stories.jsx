@@ -30,10 +30,7 @@ export const TransportModule = ({ ...args }) => {
 };
 
 TransportModule.args = {
-  title: "",
-  lead: "",
-  icon: "/icons/",
   cols: 3,
   layout: "3",
-  color: "",
+  color: "blue",
 };
