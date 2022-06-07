@@ -51,7 +51,7 @@ export const TransportModule = ({
               i
             ) => {
               return (
-                <div className={`c-box c-box--col-${cols}`}>
+                <div className={`c-box`}>
                   {i === 0 && (
                     <div>
                       <img className="w-100" src={img} alt={altText} />
