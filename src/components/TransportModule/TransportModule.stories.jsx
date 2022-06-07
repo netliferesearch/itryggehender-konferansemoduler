@@ -21,6 +21,12 @@ export default {
         type: "select",
         options: ["1", "2", "3", "1-2"],
       }
+    },
+    images: {
+      control: {
+        type: "check",
+        options: [0,1,2]
+      }
     }
   },
 };
@@ -33,4 +39,5 @@ TransportModule.args = {
   cols: 3,
   layout: "3",
   color: "blue",
+  images: []
 };

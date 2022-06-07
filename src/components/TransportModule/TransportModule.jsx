@@ -30,7 +30,8 @@ const LinkHeading = ({ href, children }) => {
 export const TransportModule = ({
   cols = 3,
   color = "orange",
-  layout = "3"
+  layout = "3",
+  images = [0]
 }) => {
 
   return (
@@ -52,7 +53,7 @@ export const TransportModule = ({
             ) => {
               return (
                 <div className={`c-box`}>
-                  {i === 0 && (
+                  {images.includes(i) && (
                     <div>
                       <img className="w-100" src={img} alt={altText} />
                     </div>
