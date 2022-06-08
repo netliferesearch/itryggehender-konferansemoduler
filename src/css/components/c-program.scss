@@ -65,10 +65,41 @@
 .c-program__description {
   margin-top: 3rem;
   margin-bottom: 3rem;
-  max-width: 40rem;
+
+  & > *,
+  & > :not(figure, img) {
+    max-width: 40rem;
+  }
+  & > img,
+  & > figure {
+    margin: 2rem 0;
+
+    @media (min-width: 60rem) {
+      width: fit-content;
+      max-width: 25rem;
+      float: right;
+      clear: both;
+      margin: 2rem 0 2rem 2rem;
+    }
+  }
+}
+
+.c-program__image {
+  margin-top: 1rem;
+
+  @media (min-width: 60rem) {
+    width: fit-content;
+    max-width: 25rem;
+    float: right;
+    clear: both;
+
+    margin-left: 2rem;
+    margin-top: 0;
+  }
 }
 
 .c-program__lecturers {
+  width: 100%;
   margin-top: 2.5rem;
   margin-bottom: 3rem;
   list-style-type: none;
