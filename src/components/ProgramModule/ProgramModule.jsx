@@ -33,7 +33,7 @@ const ProgramModule = ({ overskrift = "", ingress = "", bolker = [] }) => {
                   foredragTittel,
                   lokale,
                   omForedraget,
-                  bilde,
+                  bilde = "https://via.placeholder.com/400x300",
                   temaer,
                   lesMerLink,
                   foredragsholdere,
@@ -92,9 +92,18 @@ const ProgramModule = ({ overskrift = "", ingress = "", bolker = [] }) => {
                         id={`collapsePost${slugify(foredragTittel)}`}
                         data-parent={`#${slugify(bolkNavn)}`}
                       >
-                        {bilde && <img className="mt-4" src={bilde} alt="" />}
+                        {bilde && (
+                          <img
+                            className="c-program__image"
+                            src={bilde}
+                            alt=""
+                          />
+                        )}
                         <div className="c-program__description article article__content">
                           <p>{omForedraget}</p>
+                          <figure className="">
+                            <img src="https://via.placeholder.com/600x200" alt="img" />
+                          </figure>
                         </div>
                         <p>
                           <a href={lesMerLink}>
