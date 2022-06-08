@@ -11,6 +11,12 @@ export default {
       control: {
         type: "select"
       }
+    },
+    style: {
+      control: {
+        type: "select",
+        options: ["regular", "center", "wide", "centerWide"]
+      }
     }
   }
 }
@@ -95,5 +101,5 @@ Richtext.args = {
   heading: "h2",
   title: "Overskrift",
   body: "Lorem ipsum",
-  offset: false,
+  offset: "regular",
 }
