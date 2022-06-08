@@ -93,9 +93,9 @@ const ProgramModule = ({ overskrift = "", ingress = "", bolker = [] }) => {
                         data-parent={`#${slugify(bolkNavn)}`}
                       >
                         {bilde && <img className="mt-4" src={bilde} alt="" />}
-                        <p className="c-program__description article article__content">
-                          {omForedraget}
-                        </p>
+                        <div className="c-program__description article article__content">
+                          <p>{omForedraget}</p>
+                        </div>
                         <p>
                           <a href={lesMerLink}>
                             Les mer om foredragsholderene her
