@@ -24,7 +24,7 @@ export const BannerModule = ({
               <img className="w-100" src={bilde} alt={alternativTekst} />
             </div>
             <div className="col-md">
-              <Heading classes="mb-4" level={overskriftNivå}>
+              <Heading classes="mb-4 c-banner__heading" level={overskriftNivå}>
                 {tittel}
               </Heading>
               {tekst && <p className="c-banner__lead mb-4">{tekst}</p>}
