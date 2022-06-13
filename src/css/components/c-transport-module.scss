@@ -1,3 +1,25 @@
+.c-transport-collapsible {
+
+
+  &__kicker {
+    color: $warmGrey;
+    font-size: 1.125rem;
+  }
+
+  &__boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+  }
+  &__box {
+    min-width: 25rem;
+    max-width: 30rem;
+    margin: 0;
+  }
+}
+
+
 .c-transport-module {
   display: flex;
   flex-direction: column;
