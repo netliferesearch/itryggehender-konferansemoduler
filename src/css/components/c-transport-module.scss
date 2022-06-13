@@ -50,6 +50,11 @@
     grid-area: c;
   }
 
+  & > .box-home {
+    height: 15rem;
+    margin: 0;
+  }
+
   &__text-body {
     // copied some of this form the p tag styling of the other box style
     margin-bottom: 0;
