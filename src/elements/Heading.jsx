@@ -1,3 +1,6 @@
+import React from "react";
+
+
 export const Heading = ({ classes="", level = "h2", children }) => {
   switch (level) {
     case "h1":
@@ -15,4 +18,9 @@ export const Heading = ({ classes="", level = "h2", children }) => {
     default:
       return null;
   }
+};
+
+Heading.protoTypes = {
+  classes: PropTypes.string,
+  level: PropTypes.string,
 };
