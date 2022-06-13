@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 
 export const Heading = ({ classes="", level = "h2", children }) => {
@@ -20,7 +21,7 @@ export const Heading = ({ classes="", level = "h2", children }) => {
   }
 };
 
-Heading.protoTypes = {
+Heading.propTypes = {
   classes: PropTypes.string,
   level: PropTypes.string,
 };
