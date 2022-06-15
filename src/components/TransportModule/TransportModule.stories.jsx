@@ -13,21 +13,9 @@ export default {
     cols: {
       control: {
         type: "select",
-        options: [1, 2, 3],
-      },
-    },
-    layout: {
-      control: {
-        type: "select",
-        options: ["1", "2", "3", "1-2"],
+        options: ["1", "2", "3"],
       }
     },
-    images: {
-      control: {
-        type: "check",
-        options: [0,1,2]
-      }
-    }
   },
 };
 
@@ -36,8 +24,11 @@ export const TransportModule = ({ ...args }) => {
 };
 
 TransportModule.args = {
-  cols: 3,
-  layout: "3",
+  heading: "overskift",
+  lead: "ingress",
+  boxes: 3,
+  cols: "3",
   color: "blue",
-  images: []
+  showImg: false,
+  showText: true,
 };

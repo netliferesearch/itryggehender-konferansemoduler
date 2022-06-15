@@ -1,80 +1,33 @@
-.c-transport-collapsible {
-
-
-  &__kicker {
-    color: $warmGrey;
-    font-size: 1.125rem;
-  }
-
-  &__boxes {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-
-  }
-  &__box {
-    min-width: 25rem;
-    max-width: 30rem;
-    margin: 0;
-  }
-}
-
 
 .c-transport-module {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  align-items: end;
 
-  &--col-1 {
-  }
-
-  &--col-2 {
-    @media (min-width: 45rem) {
-      display: grid;
-      grid-template-areas: "a b";
-    }
-  }
-  &--col-3 {
-    @media (min-width: 45rem) {
-      display: grid;
-      grid-template-areas:
-        "a b"
-        "c c";
-    }
-    @media (min-width: 60rem) {
-      grid-template-areas: "a b c";
-    }
-  }
-  &--col-1-2 {
-    @media (min-width: 45rem) {
-      display: grid;
-      grid-template-areas:
-        "a a b b b"
-        "a a c c c";
-    }
+  &__box-container {
+    align-items: stretch;
   }
 }
 
 .c-box {
-  min-width: 300px;
 
-  &:nth-child(1) {
-    grid-area: a;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+  &--col-1 {
+    
   }
-  &:nth-child(2) {
-    grid-area: b;
+  &--col-2 {
+    
   }
-  &:nth-child(3) {
-    grid-area: c;
+  &--col-3 {
+    
+  }
+
+  // this reflects the padding that bootstrap adds with the col-* classes
+  margin-bottom: 20px;
+  @media (min-width: $width-lg) {
+    margin-bottom: 30px;
   }
 
   & > .box-home {
-    height: 15rem;
+    max-height: 15rem;
     margin: 0;
+    height: 100%;
   }
 
   &__text-body {
@@ -91,3 +44,4 @@
     text-overflow: ellipsis;
   }
 }
+
