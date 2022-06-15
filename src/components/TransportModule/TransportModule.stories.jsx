@@ -25,10 +25,11 @@ export const TransportModule = ({ ...args }) => {
 
 TransportModule.args = {
   heading: "overskift",
-  lead: "ingress",
+  lead: "",
   boxes: 3,
   cols: "3",
   color: "blue",
   showImg: false,
   showText: true,
+  showDummyText: true,
 };

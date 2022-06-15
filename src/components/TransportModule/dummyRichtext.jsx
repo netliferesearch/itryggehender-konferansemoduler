@@ -1,9 +1,7 @@
 export const DummyHtml = () => {
   return (
     <>
-      <h1 id="sample-markdown">Sample Markdown</h1>
-      <p>This is some basic, sample markdown.</p>
-      <h2 id="second-heading">Second Heading</h2>
+      <h3 id="second-heading">Heading</h3>
       <ul>
         <li>
           Unordered lists, and:

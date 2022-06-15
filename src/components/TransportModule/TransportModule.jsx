@@ -34,6 +34,7 @@ export const TransportModule = ({
   lead = "ingress",
   showImg = false,
   showText = false,
+  showDummyText = true,
   boxes = 3,
   color = "orange",
   cols = "3",
@@ -52,9 +53,9 @@ export const TransportModule = ({
   return (
     <>
       <section className="container c-transport-module">
-        <Heading level="h2" classes="mb-2">{heading}</Heading>
+        <Heading level="h2" classes="mb-3">{heading}</Heading>
         <div className="article mb-4">{lead}
-        <DummyHtml />
+        {showDummyText && (<DummyHtml />)}
 
         </div>
 
