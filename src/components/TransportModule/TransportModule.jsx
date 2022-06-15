@@ -44,11 +44,11 @@ export const TransportModule = ({
     2: "col-md-6",
     3: "col-lg-4 col-md-6",
   };
-  const boxLayoutStyle = {
-    1: "c-box--col-1",
-    2: "c-box--col-2",
-    3: "c-box--col-3",
-  };
+  // const boxLayoutStyle = {
+  //   1: "c-box--col-1",
+  //   2: "c-box--col-2",
+  //   3: "c-box--col-3",
+  // };
 
   return (
     <>
@@ -81,7 +81,7 @@ export const TransportModule = ({
                       </div>
                     )}
                     <div
-                      className={`u-bg-color--${color} c-box--col-${boxLayoutStyle[cols]} box-home`}
+                      className={`u-bg-color--${color} box-home`}
                     >
                       <LinkHeading href={url}>heading</LinkHeading>
                       {showText && (

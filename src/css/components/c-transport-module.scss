@@ -7,17 +7,6 @@
 }
 
 .c-box {
-
-  &--col-1 {
-    
-  }
-  &--col-2 {
-    
-  }
-  &--col-3 {
-    
-  }
-
   // this reflects the padding that bootstrap adds with the col-* classes
   margin-bottom: 20px;
   @media (min-width: $width-lg) {
