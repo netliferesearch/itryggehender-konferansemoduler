@@ -1,4 +1,5 @@
 import { Heading } from "../../elements/Heading";
+import { Icon } from "../../elements/Icon";
 import { DummyHtml } from "./dummyRichtext";
 
 const generateDummyContent = (amount) => {
@@ -53,14 +54,14 @@ export const TransportModule = ({
   return (
     <>
       <section className="container c-transport-module">
-        <Heading level="h2" classes="mb-3">{heading}</Heading>
+        <Heading level="h2" classes="mb-3"><span className="c-transport-module__icon"><Icon /></span>{heading}</Heading>
         <div className="article mb-4">{lead}
         {showDummyText && (<DummyHtml />)}
 
         </div>
 
         <div className="">
-          <div className={`row c-transport-module__box-container`}>
+          <div className={`row`}>
             {generateDummyContent(boxes).map(
               (
                 {

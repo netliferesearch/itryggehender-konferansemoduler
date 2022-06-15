@@ -1,8 +1,10 @@
 
 .c-transport-module {
 
-  &__box-container {
-    align-items: stretch;
+  &__icon {
+    max-width: 1.5rem;
+    max-height: 1.5rem;
+    padding: 0 0.5rem;
   }
 }
 
