@@ -18,6 +18,10 @@
   & > .box-home {
     height: 15rem;
     margin: 0;
+
+    &--no-text {
+      height: auto;
+    }
   }
 
   &__img {

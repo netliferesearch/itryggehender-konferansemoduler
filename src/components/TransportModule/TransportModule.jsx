@@ -82,7 +82,7 @@ export const TransportModule = ({
                       </div>
                     )}
                     <div
-                      className={`u-bg-color--${color} box-home`}
+                      className={`u-bg-color--${color} ${!showText ? "box-home--no-text" :  ""} box-home`}
                     >
                       <LinkHeading color={color} href={url}>heading</LinkHeading>
                       {showText && (
