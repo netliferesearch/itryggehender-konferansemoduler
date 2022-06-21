@@ -19,11 +19,11 @@ const generateDummyContent = (amount) => {
   return dummyArray;
 };
 
-const LinkHeading = ({ href, children }) => {
+const LinkHeading = ({ href, children, color }) => {
   if (href) {
     return (
       <a href={href}>
-        <h3 className="btn btn-link--arrow title-link">{children}</h3>
+        <h3 className={`btn ${color === "deep-blue" ? "u-btn-link--arrow-white" : ""} btn-link--arrow title-link`}>{children}</h3>
       </a>
     );
   }
@@ -84,7 +84,7 @@ export const TransportModule = ({
                     <div
                       className={`u-bg-color--${color} box-home`}
                     >
-                      <LinkHeading href={url}>heading</LinkHeading>
+                      <LinkHeading color={color} href={url}>heading</LinkHeading>
                       {showText && (
                         <div className={`c-box__text-body`}>{body}</div>
                       )}
