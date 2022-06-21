@@ -20,6 +20,20 @@
     margin: 0;
   }
 
+  &__img {
+    object-fit: cover;
+
+    &--col-1{
+      height: 400px;
+    }
+    &--col-2{
+      height: 300px;
+    }
+    &--col-3{
+      height: 210px;
+    }
+  }
+
   &__text-body {
     // copied some of this form the p tag styling of the other box style
     margin-bottom: 0;

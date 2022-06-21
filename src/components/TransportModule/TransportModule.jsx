@@ -6,7 +6,7 @@ const generateDummyContent = (amount) => {
   const dummyArray = [];
   for (let i = 0; i < amount; i++) {
     dummyArray.push({
-      img: "https://via.placeholder.com/400x300",
+      img: "https://via.placeholder.com/600x400",
       showImg: false,
       heading: "heading",
       body: `En rummelig havesal i KONSUL BERNICKS hus. I forgrunden til venstre
@@ -45,11 +45,6 @@ export const TransportModule = ({
     2: "col-md-6",
     3: "col-lg-4 col-md-6",
   };
-  // const boxLayoutStyle = {
-  //   1: "c-box--col-1",
-  //   2: "c-box--col-2",
-  //   3: "c-box--col-3",
-  // };
 
   return (
     <>
@@ -65,7 +60,7 @@ export const TransportModule = ({
             {generateDummyContent(boxes).map(
               (
                 {
-                  img = "https://via.placeholder.com/400x300",
+                  img = "https://via.placeholder.com/600x400",
                   altText = "alt text",
                   heading = "heading",
                   body = "text",
@@ -78,7 +73,12 @@ export const TransportModule = ({
                   <div className={`c-box ${layoutStyle[cols]}`}>
                     {showImg && (
                       <div>
-                        <img className="w-100" src={img} alt={altText} />
+                        {i === 1 ? (
+                          <img className={`w-100 c-box__img c-box__img--col-${cols}`} src="https://via.placeholder.com/400x600" alt={altText} />
+                        )
+                        : ( 
+                          <img className={`w-100 c-box__img c-box__img--col-${cols}`} src={img} alt={altText} />
+                        )}
                       </div>
                     )}
                     <div
