@@ -14,6 +14,8 @@
   }
   &--deep-blue {
     background-color: $bluePurple !important;
-    color: white !important;
+    * {
+      color: white !important;
+    }
   }
 }
