@@ -13,15 +13,9 @@
     // align-self: center;
   }
 
-  .u-btn-link--arrow-white {
-    &.btn-link--arrow:after {
-      background-image: url(../../img/arrow-right-white.svg) !important;
-    }
-  }
-
   &__heading {
     font-size: 1.5rem;
-    
+
     @media (min-width: 30rem) {
       font-size: 2rem;
     }
