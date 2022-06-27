@@ -599,6 +599,12 @@ function App() {
                 >
                   Youtube
                 </a>
+                <a
+                  href="/"
+                  className="footer__social footer__social--linkedin"
+                >
+                  linkedin
+                </a>
               </div>
             </div>
           </div>
