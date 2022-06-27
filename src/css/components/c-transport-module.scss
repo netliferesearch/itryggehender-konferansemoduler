@@ -11,17 +11,20 @@
 .c-box {
   // this reflects the padding that bootstrap adds with the col-* classes
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+
   @media (min-width: $width-lg) {
     margin-bottom: 30px;
   }
 
   & > .box-home {
-    height: 15rem;
     margin: 0;
+  }
 
-    &--no-text {
-      height: auto;
-    }
+  &__heading {
+    // Fighting existing style rules on .title-link
+    max-height: none !important;
   }
 
   &__img {
@@ -38,8 +41,14 @@
     }
   }
 
+  &__text-container {
+    height: auto;
+  }
+
   &__text-body {
-    // copied some of this form the p tag styling of the other box style
+    // this is exactly 4 lines of text with the current line hegiht.
+    max-height: 7rem;
+    // copied some of this from the p tag styling of the other box style
     margin-bottom: 0;
     line-height: 1.75rem;
     max-height: 7rem;
