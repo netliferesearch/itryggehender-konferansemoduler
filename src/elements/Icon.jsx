@@ -1,4 +1,4 @@
-export const Icon = () => {
+export const ClockIcon = () => {
   return (
     <svg
       width="22"

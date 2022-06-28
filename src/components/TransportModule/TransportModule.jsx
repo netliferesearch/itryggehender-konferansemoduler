@@ -1,5 +1,5 @@
 import { Heading } from "../../elements/Heading";
-import { Icon } from "../../elements/Icon";
+import { ClockIcon } from "../../elements/Icon";
 import { DummyHtml } from "./dummyRichtext";
 
 const generateDummyContent = (amount) => {
@@ -62,7 +62,7 @@ export const TransportModule = ({
           <div className="col-8">
           <Heading level="h2" classes="mb-3">
             <span className="c-transport-module__icon">
-              <Icon />
+              <ClockIcon />
             </span>
             {heading}
           </Heading>

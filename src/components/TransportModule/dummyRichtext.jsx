@@ -1,4 +1,4 @@
-export const DummyHtml = ({}) => {
+export const DummyHtml = () => {
   return (
     <>
       <h3 id="second-heading">Heading</h3>
