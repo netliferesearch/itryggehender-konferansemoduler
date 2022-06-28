@@ -9,7 +9,7 @@ const generateDummyContent = (amount) => {
       img: "https://via.placeholder.com/600x400",
       showImg: false,
       heading:
-        "heading er engelsk for en overskift eller noe i den duren. Dette er en ganske lang overskrift for å se om ting knekker/brekker/ikke funker",
+        "Dette er en ganske lang overskrift for å se om ting knekker/brekker/ikke funker. Pasientsikkerhetskonferansen. brannslukningsapparat",
       body: `En rummelig havesal i KONSUL BERNICKS hus. I forgrunden til venstre
       fører en dør ind til konsulens værelse; længere tilbage, på samme væg,
       er en lignende dør. Midt på den modsatte væg er en større
