@@ -1,0 +1,13 @@
+
+.u-align {
+  &-left {
+    margin-right: auto;
+  }
+  &-right {
+    margin-left: auto;
+  }
+  &-center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
