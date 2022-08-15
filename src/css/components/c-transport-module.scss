@@ -1,10 +1,11 @@
-
 .c-transport-module {
-
   &__icon {
-    max-width: 1.5rem;
-    max-height: 1.5rem;
     padding-right: 0.5rem;
+
+    svg {
+      max-width: 1.5rem;
+      max-height: 1.5rem;
+    }
   }
 }
 
@@ -26,13 +27,13 @@
     object-fit: cover;
     width: 100%;
 
-    &--col-1{
+    &--col-1 {
       height: 400px;
     }
-    &--col-2{
+    &--col-2 {
       height: 300px;
     }
-    &--col-3{
+    &--col-3 {
       height: 210px;
     }
   }
@@ -44,7 +45,7 @@
     word-wrap: break-word;
     hyphens: auto;
   }
-  
+
   &__text-container {
     height: auto;
   }
@@ -64,4 +65,3 @@
     text-overflow: ellipsis;
   }
 }
-
