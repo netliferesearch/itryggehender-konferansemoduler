@@ -14,7 +14,19 @@ export default {
       control: {
         type: "select",
         options: ["1", "2", "3"],
-      }
+      },
+    },
+    alignLead: {
+      control: {
+        type: "select",
+        options: ["default", "left", "center", "right"],
+      },
+    },
+    alignBoxes: {
+      control: {
+        type: "select",
+        options: ["default", "left", "center", "right"],
+      },
     },
   },
 };
@@ -26,8 +38,10 @@ export const TransportModule = ({ ...args }) => {
 TransportModule.args = {
   heading: "overskift",
   lead: "",
+  alignLead: "default",
   boxes: 3,
   cols: "3",
+  alignBoxes: "default",
   color: "blue",
   showImg: false,
   showText: true,

@@ -42,34 +42,42 @@ const LinkHeading = ({ href, children, color }) => {
 export const TransportModule = ({
   heading = "overskift",
   lead = "ingress",
+  alignLead = "left",
   showImg = false,
   showText = false,
   showDummyText = true,
   boxes = 3,
+  alignBoxes = "left",
   color = "orange",
   cols = "3",
 }) => {
   const layoutStyle = {
-    1: "col-8 offset-2",
+    1: "col-8",
     2: "col-md-6",
     3: "col-lg-4 col-md-6",
+  };
+  const alignStyle = {
+    default: "",
+    left: "u-align-left",
+    center: "u-align-center",
+    right: "u-align-right",
   };
 
   return (
     <>
       <section className="container c-transport-module">
         <div className="row">
-          <div className="col-8">
-          <Heading level="h2" classes="mb-3">
-            <span className="c-transport-module__icon">
-              <ClockIcon />
-            </span>
-            {heading}
-          </Heading>
-          <div className="article mb-4">
-            {lead}
-            {showDummyText && <DummyHtml />}
-          </div>
+          <div className={`col-8 ${alignStyle[alignLead]}`}>
+            <Heading level="h2" classes="mb-3">
+              <span className="c-transport-module__icon">
+                <ClockIcon />
+              </span>
+              {heading}
+            </Heading>
+            <div className="article mb-4">
+              {lead}
+              {showDummyText && <DummyHtml />}
+            </div>
           </div>
         </div>
 
@@ -88,13 +96,17 @@ export const TransportModule = ({
                 i
               ) => {
                 return (
-                  <div className={`c-box ${layoutStyle[cols]}`}>
+                  <div
+                    className={`c-box ${layoutStyle[cols]} ${
+                      cols === "1" ? alignStyle[alignBoxes] : ""
+                    }`}
+                  >
                     {showImg && (
                       <div>
                         {i === 1 ? (
                           <img
                             className={`w-100 c-box__img c-box__img--col-${cols}`}
-                            src="https://via.placeholder.com/400x600"
+                            src="https://via.placeholder.com/1500x500"
                             alt={altText}
                           />
                         ) : (
