@@ -52,7 +52,7 @@ export const TransportModule = ({
   cols = "3",
 }) => {
   const layoutStyle = {
-    1: "col-8",
+    1: "col-12 col-md-10 col-lg-8",
     2: "col-md-6",
     3: "col-lg-4 col-md-6",
   };
@@ -67,7 +67,7 @@ export const TransportModule = ({
     <>
       <section className="container c-transport-module">
         <div className="row">
-          <div className={`col-8 ${alignStyle[alignLead]}`}>
+          <div className={`col-12 col-md-10 col-lg-8 ${alignStyle[alignLead]}`}>
             <Heading level="h2" classes="mb-3">
               <span className="c-transport-module__icon">
                 <ClockIcon />
