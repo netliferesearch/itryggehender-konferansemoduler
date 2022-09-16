@@ -1,21 +1,29 @@
-.c-speakers__speaker-list {
-}
-
 .c-speakers__speaker {
   width: 100%;
 }
 
 .c-speakers__speaker-header {
   display: flex;
+  padding-top: 1.5rem;
 }
 
 .c-speakers__speaker-image {
   margin-right: 1rem;
   border-radius: 9999px;
+  min-width: 140px;
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
 }
 
 .c-speakers__speaker-info {
+  display: flex;
+  flex-direction: column;
   padding-top: 1.25rem;
+}
+
+.c-speakers__speaker-name {
+  padding-right: 2rem;
 }
 
 .c-speakers__speaker-description {

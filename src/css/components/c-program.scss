@@ -1,6 +1,7 @@
 .c-program__meta {
   display: inline-flex;
   margin-right: 2rem;
+  padding-top: 1.5rem;
   font-weight: 600;
 
   img {
@@ -15,6 +16,8 @@
 }
 
 .c-program__main-lecturer {
+  //1.35rem is 22px
+  font-size: 1.35rem;
   margin-bottom: 1rem;
 }
 
@@ -39,30 +42,101 @@
   border-radius: 9999px;
 }
 
+.c-program__themes-color--orange {
+  background-color: $orange;
+}
+.c-program__themes-color--blue-purple {
+  background-color: $bluePurple;
+}
+.c-program__themes-color--light-orange {
+  background-color: $lightOrange;
+}
+.c-program__themes-color--light-blue {
+  background-color: $lightBlue;
+}
+.c-program__themes-color--light-brown {
+  background-color: $lightBrown;
+}
+.c-program__themes-color--warm-grey {
+  background-color: $warmGrey;
+}
+.c-program__themes-color--deep-green {
+  background-color: $deepGreen;
+}
+
 .c-program__description {
   margin-top: 3rem;
   margin-bottom: 3rem;
+
+  & > *,
+  & > :not(figure, img) {
+    max-width: 40rem;
+  }
+  & > img,
+  & > figure {
+    margin: 2rem 0;
+
+    @media (min-width: 60rem) {
+      width: fit-content;
+      max-width: 25rem;
+      float: right;
+      clear: both;
+      margin: 2rem 0 2rem 2rem;
+    }
+  }
+}
+
+.c-program__image {
+  margin-top: 1rem;
+
+  @media (min-width: 60rem) {
+    width: fit-content;
+    max-width: 25rem;
+    float: right;
+    clear: both;
+
+    margin-left: 2rem;
+    margin-top: 0;
+  }
 }
 
 .c-program__lecturers {
+  width: 100%;
   margin-top: 2.5rem;
   margin-bottom: 3rem;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
+  margin-left: -1rem;
+  margin-right: -1rem;
 }
 
 .c-program__lecturer {
-  margin-right: 2rem;
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
   margin-top: 2rem;
-  max-width: 200px;
+
+  @media (min-width: 576px) {
+    width: 50%;
+  }
+
+  @media (min-width: 768px) {
+    width: 33.3333%;
+  }
+
+  @media (min-width: 992px) {
+    width: 25%;
+  }
 }
 
 .c-program__lecturer-image {
   border-radius: 9999px;
   margin-bottom: 0.5rem;
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
 }
 
 .c-program__lecturer-name {
-  text-decoration: underline;
 }

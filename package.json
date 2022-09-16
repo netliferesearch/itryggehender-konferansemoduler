@@ -17,8 +17,7 @@
   "scripts": {
     "start": "react-scripts start",
     "dev": "yarn start & yarn storybook & sass --watch src/css/dev.scss src/css/dev.css",
-    "build": "react-scripts build",
-    "build-css": "sass src/css/main.scss public/css/main.css",
+    "build-css": "sass src/css/main.scss assets/main.css",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
@@ -67,7 +66,7 @@
     "autoprefixer": "^10.4.7",
     "babel-plugin-named-exports-order": "^0.0.2",
     "prop-types": "^15.8.1",
-    "sass": "^1.52.1",
+    "sass": "1.32.13",
     "webpack": "^5.72.1"
   }
 }

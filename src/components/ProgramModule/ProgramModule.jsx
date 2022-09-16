@@ -16,13 +16,15 @@ const ProgramModule = ({ overskrift = "", ingress = "", bolker = [] }) => {
     <>
       <Richtext heading="h1" title={overskrift} body={ingress} offset />
 
-      <div className="container">
-        {bolker.map(({ bolkNavn, bolkIngress, programposter }) => (
-          <section className="row mb-5">
+      {bolker.map(({ bolkNavn, bolkIngress, programposter }) => (
+        <section className="container mb-5" key={bolkNavn}>
+          <div className="row">
             <div className="col-lg-7 mb-5">
               <h2 className="c-program__heading">{bolkNavn}</h2>
               <p>{bolkIngress}</p>
             </div>
+          </div>
+          <div className="row">
             <div className="accordion col-12" id={slugify(bolkNavn)}>
               {programposter.map(
                 ({
@@ -31,7 +33,7 @@ const ProgramModule = ({ overskrift = "", ingress = "", bolker = [] }) => {
                   foredragTittel,
                   lokale,
                   omForedraget,
-                  bilde,
+                  bilde = "https://via.placeholder.com/400x300",
                   temaer,
                   lesMerLink,
                   foredragsholdere,
@@ -48,7 +50,15 @@ const ProgramModule = ({ overskrift = "", ingress = "", bolker = [] }) => {
                       aria-expanded="false"
                       aria-controls={`collapsePost${slugify(foredragTittel)}`}
                     >
-                      <span>
+                      <img
+                        className="c-collapsible__button-arrow"
+                        src={ArrowAccordion}
+                        alt=""
+                      />
+                    </button>
+
+                    <div className="c-collapsible__body">
+                      <div>
                         {klokkeslett && (
                           <span className="c-program__meta">
                             <img className="" src={Clock} alt="" />
@@ -62,26 +72,16 @@ const ProgramModule = ({ overskrift = "", ingress = "", bolker = [] }) => {
                             {lokale}
                           </span>
                         )}
-                      </span>
-
-                      <img
-                        className="c-collapsible__button-arrow"
-                        src={ArrowAccordion}
-                        alt=""
-                      />
-                    </button>
-
-                    <div className="c-collapsible__body">
+                      </div>
                       <h3 className="c-program__heading">{foredragTittel}</h3>
                       <div className="c-program__main-lecturer">
                         {foredragsholder}
                       </div>
                       <ul className="c-program__themes">
-                        {temaer.map(({ tema, color }) => (
+                        {temaer.map(({ tema, colorClass }) => (
                           <li key={tema}>
                             <div
-                              className="c-program__themes-color"
-                              style={{ backgroundColor: color }}
+                              className={`c-program__themes-color c-program__themes-color--${colorClass}`}
                             ></div>
                             {tema}
                           </li>
@@ -92,9 +92,18 @@ const ProgramModule = ({ overskrift = "", ingress = "", bolker = [] }) => {
                         id={`collapsePost${slugify(foredragTittel)}`}
                         data-parent={`#${slugify(bolkNavn)}`}
                       >
-                        {bilde && <img className="mt-4" src={bilde} alt="" />}
-                        <div className="c-program__description">
-                          {omForedraget}
+                        {bilde && (
+                          <img
+                            className="c-program__image"
+                            src={bilde}
+                            alt=""
+                          />
+                        )}
+                        <div className="c-program__description article article__content">
+                          <p>{omForedraget}</p>
+                          <figure className="">
+                            <img src="https://via.placeholder.com/600x200" alt="img" />
+                          </figure>
                         </div>
                         <p>
                           <a href={lesMerLink}>
@@ -103,18 +112,23 @@ const ProgramModule = ({ overskrift = "", ingress = "", bolker = [] }) => {
                         </p>
                         <ul className="c-program__lecturers">
                           {foredragsholdere.map(
-                            ({ navn, beskrivelse, bilde }, index) => (
+                            ({ navn, stilling, selskap, bilde }, index) => (
                               <li key={index} className="c-program__lecturer">
                                 <img
                                   className="c-program__lecturer-image"
                                   src={bilde}
                                   alt=""
+                                  width="140"
+                                  height="140"
                                 />
                                 <div className="c-program__lecturer-name">
-                                  {navn}
+                                  {navn},
                                 </div>
-                                <div className="c-program__lecturer-description">
-                                  {beskrivelse}
+                                <div className="c-program__lecturer-profession">
+                                  {stilling}
+                                </div>
+                                <div className="c-program__lecturer-company">
+                                  {selskap}
                                 </div>
                               </li>
                             )
@@ -126,9 +140,9 @@ const ProgramModule = ({ overskrift = "", ingress = "", bolker = [] }) => {
                 )
               )}
             </div>
-          </section>
-        ))}
-      </div>
+          </div>
+        </section>
+      ))}
     </>
   );
 };
@@ -147,7 +161,12 @@ ProgramModule.propTypes = {
           lokale: PropTypes.string,
           omForedraget: PropTypes.string,
           bilde: PropTypes.string,
-          temaer: PropTypes.arrayOf(PropTypes.object),
+          temaer: PropTypes.arrayOf(
+            PropTypes.shape({
+              tema: PropTypes.string,
+              colorClass: PropTypes.string,
+            })
+          ),
           lesMerLink: PropTypes.string,
           foredragsholdere: PropTypes.arrayOf(
             PropTypes.shape({
