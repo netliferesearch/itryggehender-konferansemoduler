@@ -1,0 +1,69 @@
+.c-transport-module {
+  margin-bottom: 4.5rem;
+
+  &__icon {
+    padding-right: 0.5rem;
+
+    svg {
+      max-width: 1.5rem;
+      max-height: 1.5rem;
+    }
+  }
+}
+
+.c-box {
+  // this reflects the padding that bootstrap adds with the col-* classes
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $width-lg) {
+    margin-bottom: 30px;
+  }
+
+  & > .box-home {
+    margin: 0;
+  }
+
+  &__img {
+    object-fit: cover;
+    width: 100%;
+
+    &--col-1 {
+      height: 400px;
+    }
+    &--col-2 {
+      height: 300px;
+    }
+    &--col-3 {
+      height: 210px;
+    }
+  }
+
+  &__heading {
+    // Fighting existing style rules on .title-link
+    max-height: none !important;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+
+  &__text-container {
+    height: auto;
+  }
+
+  &__text-body {
+    // this is exactly 4 lines of text with the current line hegiht.
+    max-height: 7rem;
+    // copied some of this from the p tag styling of the other box style
+    margin-bottom: 0;
+    line-height: 1.75rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    line-clamp: 4;
+    box-orient: vertical;
+    text-overflow: ellipsis;
+  }
+}

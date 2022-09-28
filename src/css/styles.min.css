@@ -9796,9 +9796,9 @@ body p a:hover {
   background-repeat: no-repeat;
   background-position: right;
 }
-/* .btn-link--arrow:hover:not(:focus):after {
+.btn-link--arrow:hover:not(:focus):after {
   background-image: url(../img/arrow-right-orange.svg);
-} */
+}
 .btn-link--block {
   border: 0;
 }

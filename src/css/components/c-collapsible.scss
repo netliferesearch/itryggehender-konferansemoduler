@@ -1,15 +1,11 @@
 .c-collapsible {
   border-top: 1px solid $warmGrey;
-  border-bottom: 1px solid $warmGrey;
 }
 
 .c-collapsible__button {
-  padding: 1.5rem 1.5rem 0 1.5rem;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  text-align: left;
-  background-color: $lightGrey;
+  position: absolute;
+  right: 1rem;
+  padding: 1.5rem;
 }
 
 .c-collapsible__button .c-collapsible__button-arrow {
