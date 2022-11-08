@@ -16,27 +16,27 @@ const generateDummyContent = (amount) => {
       fører en dør ind til konsulens værelse; længere tilbage, på samme væg,
       er en lignende dør. Midt på den modsatte væg er en større
       indgangsdør.`,
-      url: "#",
+      href: i === 0 ? "" : "#", // Let the first module be a textbox module without link
     });
   }
   return dummyArray;
 };
 
 const LinkHeading = ({ href, children, color }) => {
-  if (href) {
-    return (
-      <a href={href}>
-        <h3
-          className={`btn c-box__heading ${
-            color === "deep-blue" ? "u-btn-link--arrow-white" : ""
-          } btn-link--arrow title-link`}
-        >
-          {children}
-        </h3>
-      </a>
-    );
+  if (!href) {
+    return <h3 className="c-box__heading">{children}</h3>;
   }
-  return <h3>{children}</h3>;
+  return (
+    <a href={href}>
+      <h3
+        className={`btn c-box__heading ${
+          color === "deep-blue" ? "u-btn-link--arrow-white" : ""
+        } btn-link--arrow title-link`}
+      >
+        {children}
+      </h3>
+    </a>
+  );
 };
 
 export const TransportModule = ({
@@ -90,7 +90,7 @@ export const TransportModule = ({
                   altText = "alt text",
                   heading = "heading",
                   body = "text",
-                  url = "#",
+                  href = "#",
                   cta = true,
                 },
                 i
@@ -121,7 +121,7 @@ export const TransportModule = ({
                     <div
                       className={`u-bg-color--${color} box-home c-box__text-container`}
                     >
-                      <LinkHeading color={color} href={url}>
+                      <LinkHeading color={color} href={href}>
                         {heading}
                       </LinkHeading>
                       {showText && (
