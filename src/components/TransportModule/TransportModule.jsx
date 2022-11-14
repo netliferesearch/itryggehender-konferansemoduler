@@ -97,7 +97,7 @@ export const TransportModule = ({
               ) => {
                 return (
                   <div
-                    className={`c-box ${layoutStyle[cols]} ${
+                    className={`c-box ${href ? '' : 'c-box--no-link'} ${layoutStyle[cols]} ${
                       cols === "1" ? alignStyle[alignBoxes] : ""
                     }`}
                   >
