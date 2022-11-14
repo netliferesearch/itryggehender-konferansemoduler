@@ -66,4 +66,18 @@
     box-orient: vertical;
     text-overflow: ellipsis;
   }
+
+  &--no-link & {
+    &__text-body {
+      max-height: initial;
+      -webkit-line-clamp: initial;
+      line-clamp: initial;
+
+      & p {
+        max-height: initial;
+        -webkit-line-clamp: initial;
+        line-clamp: initial;
+      }
+    }
+  }
 }
