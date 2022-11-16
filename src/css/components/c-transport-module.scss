@@ -25,6 +25,11 @@
     margin-inline: 0;
     padding-inline-start: 2.5rem;
   }
+
+  & li a {
+    text-decoration: none;
+    border-bottom: 1.2px solid $orange;
+  }
 }
 
 .c-box {
