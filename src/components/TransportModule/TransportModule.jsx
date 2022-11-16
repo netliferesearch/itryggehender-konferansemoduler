@@ -93,7 +93,7 @@ export const TransportModule = ({
                   href = "#",
                   cta = true,
                 },
-                i
+                index
               ) => {
                 return (
                   <div
@@ -103,7 +103,7 @@ export const TransportModule = ({
                   >
                     {showImg && (
                       <div>
-                        {i === 1 ? (
+                        {index === 1 ? (
                           <img
                             className={`w-100 c-box__img c-box__img--col-${cols}`}
                             src="https://via.placeholder.com/1500x500"
@@ -125,7 +125,25 @@ export const TransportModule = ({
                         {heading}
                       </LinkHeading>
                       {showText && (
-                        <div className={`c-box__text-body`}>{body}</div>
+                        <div className={`c-box__text-body`}>
+                          <p>{body}</p>
+                          {index === 0 && (
+                            <>
+                              <ul>
+                                <li>Unordered list item</li>
+                                <li>
+                                  <a href="/">Link</a>
+                                </li>
+                              </ul>
+                              <ol>
+                                <li>Ordered list item</li>
+                                <li>
+                                  <a href="/">Link</a>
+                                </li>
+                              </ol>
+                            </>
+                          )}
+                        </div>
                       )}
                     </div>
                   </div>
