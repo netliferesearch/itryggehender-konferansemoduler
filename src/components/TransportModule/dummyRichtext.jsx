@@ -24,19 +24,23 @@ export const DummyHtml = () => {
         . Even <del>strikethrough</del>.{" "}
         <a href="https://markdowntohtml.com">A link</a> to somewhere.
       </p>
-      <p>More text to see how text can look when there is alot of it. We can see that by having alot of text and looking at the page. There we can see alot of text on the page. That is done by writing alot of text to be displayed on the page. Check it out by looking at the text that has been added on on the page. There you go. Text on a page. You're welcome. :)</p>
+      <p>
+        More text to see how text can look when there is alot of it. We can see
+        that by having alot of text and looking at the page. There we can see
+        alot of text on the page. That is done by writing alot of text to be
+        displayed on the page. Check it out by looking at the text that has been
+        added on on the page. There you go. Text on a page. You're welcome. :)
+      </p>
       <p>And code highlighting:</p>
       <pre>
-        <code class="">
-          <span class="">var</span> foo ={" "}
-          <span class="">'bar'</span>;
-          <span class="">
-            <span class="">function</span>{" "}
-            <span class="">baz</span>
-            <span class="">(s)</span>{" "}
+        <code className="">
+          <span className="">var</span> foo = <span className="">'bar'</span>;
+          <span className="">
+            <span className="">function</span> <span className="">baz</span>
+            <span className="">(s)</span>{" "}
           </span>
-          <span class="">return</span>
-          <span class="">':'</span>;
+          <span className="">return</span>
+          <span className="">':'</span>;
         </code>
       </pre>
       <p>
