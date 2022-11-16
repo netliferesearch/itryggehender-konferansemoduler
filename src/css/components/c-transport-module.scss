@@ -9,6 +9,22 @@
       max-height: 1.5rem;
     }
   }
+
+  & ul {
+    display: block;
+    list-style-type: disc;
+    margin-block: 1rem;
+    margin-inline: 0;
+    padding-inline-start: 2.5rem;
+  }
+
+  & ol {
+    display: block;
+    list-style-type: decimal;
+    margin-block: 1rem;
+    margin-inline: 0;
+    padding-inline-start: 2.5rem;
+  }
 }
 
 .c-box {
@@ -83,25 +99,9 @@
         line-clamp: initial;
       }
 
-      & ul {
-        display: block;
-        list-style-type: disc;
-        margin-block: 1rem;
-        margin-inline: 0;
-        padding-inline-start: 2.5rem;
-      }
-
-      & ol {
-        display: block;
-        list-style-type: decimal;
-        margin-block: 1rem;
-        margin-inline: 0;
-        padding-inline-start: 2.5rem;
-      }
-
       & a {
-        text-decoration: underline;
-        color: $bluePurple;
+        text-decoration: none;
+        border-bottom: 1.2px solid $bluePurple;
       }
     }
   }
