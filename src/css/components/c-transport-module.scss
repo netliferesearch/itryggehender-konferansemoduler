@@ -9,6 +9,27 @@
       max-height: 1.5rem;
     }
   }
+
+  & ul {
+    display: block;
+    list-style-type: disc;
+    margin-block: 1rem;
+    margin-inline: 0;
+    padding-inline-start: 2.5rem;
+  }
+
+  & ol {
+    display: block;
+    list-style-type: decimal;
+    margin-block: 1rem;
+    margin-inline: 0;
+    padding-inline-start: 2.5rem;
+  }
+
+  & li a {
+    text-decoration: none;
+    border-bottom: 1.2px solid $orange;
+  }
 }
 
 .c-box {
@@ -65,5 +86,28 @@
     line-clamp: 4;
     box-orient: vertical;
     text-overflow: ellipsis;
+  }
+
+  &--no-link & {
+    &__text-body {
+      max-height: initial;
+      -webkit-line-clamp: initial;
+      line-clamp: initial;
+
+      & p:first-child {
+        margin-block-start: 0;
+      }
+      & p {
+        margin-block-start: 1rem;
+        max-height: initial;
+        -webkit-line-clamp: initial;
+        line-clamp: initial;
+      }
+
+      & a {
+        text-decoration: none;
+        border-bottom: 1.2px solid $bluePurple;
+      }
+    }
   }
 }
